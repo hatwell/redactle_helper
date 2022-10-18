@@ -1,4 +1,5 @@
 const inputField = document.getElementById("userGuess");
+
 const words = [
   "who",
   "what",
@@ -38,6 +39,17 @@ const words = [
   "human",
   "book",
   "early",
+  "life",
+  "social",
+  "mythology",
+  "origin",
+  "might",
+  "could",
+  "will",
+  "were",
+  "thing",
+  "not",
+  "no",
 ];
 
 const submitButton = document.getElementById("submitGuess");
@@ -46,3 +58,8 @@ words.forEach((word) => {
   inputField.value = word;
   submitButton.click();
 });
+
+const submitWord = (word) => {
+  document.getElementById("userGuess").innerText = word;
+  document.getElementById("submitGuess").click();
+};
